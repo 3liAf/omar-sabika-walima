@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Production builds
+dist/
+dist-ssr/
+
+# Local env files
+.env
+.env.local
+*.local
+
+# Vercel
+.vercel/
+
+# Temporary scratch and cache
+scratch/
+.DS_Store
