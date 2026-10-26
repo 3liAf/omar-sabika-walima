@@ -62,9 +62,6 @@ export const RsvpSection: React.FC = () => {
           <h3 className="font-serif text-3xl sm:text-4xl text-[#142A24] font-medium pt-1">
             R.S.V.P
           </h3>
-          <p className="font-serif italic text-xs sm:text-sm text-[#6B655B] max-w-md mx-auto px-2">
-            Please kindly confirm your presence at your earliest convenience via call or WhatsApp.
-          </p>
         </div>
 
         <GoldDivider className="my-3 sm:my-5" />

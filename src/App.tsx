@@ -43,7 +43,7 @@ export function App() {
         {/* Ambient Stardust Particles Floating in Background */}
         <AmbientGoldenParticles />
 
-        {/* Floating Halal Duff Audio Player */}
+        {/* Background nasheed (YouTube) */}
         <AudioPlayer autoPlayTrigger={hasStartedAudio} />
 
         {/* Interactive 3D Wax Sealed Envelope Modal */}
@@ -78,7 +78,7 @@ export function App() {
           {/* Live Countdown to 28 December */}
           <CountdownTimer />
 
-          {/* Event Details (Walima Sofitel, evening, 1st floor) */}
+          {/* Event Details (Walima Sofitel, 1–4 PM, 1st floor) */}
           <EventCard />
 
           {/* RSVP Section (no host names, 3 numbers with WhatsApp and Call) */}

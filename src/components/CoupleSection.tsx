@@ -72,6 +72,14 @@ export const CoupleSection: React.FC = () => {
           <p className="font-serif italic text-[11px] sm:text-xs text-[#6B655B] mt-1 max-w-md mx-auto px-1">
             &ldquo;Our Lord, grant us from among our spouses and offspring comfort to our eyes, and make us a leader for the righteous.&rdquo;
           </p>
+          <p
+            className="text-[13px] sm:text-[15px] text-[#4A5A52] mt-3 max-w-md mx-auto px-1 leading-[2.3]"
+            dir="rtl"
+            lang="ur"
+            style={{ fontFamily: "'Noto Nastaliq Urdu', serif" }}
+          >
+            اے ہمارے پروردگار، ہمیں ہماری بیویوں اور اولاد کی طرف سے آنکھوں کی ٹھنڈک عطا فرما، اور ہمیں پرہیزگاروں کا امام بنا۔
+          </p>
           <span className="text-[9px] sm:text-[10px] font-sans text-[#8E6B2C]/70 tracking-widest uppercase block mt-0.5">
             Surah Al-Furqan (25:74)
           </span>

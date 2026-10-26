@@ -6,14 +6,14 @@ import { Reveal } from './Reveal'
 export const EventCard: React.FC = () => {
   const [downloadedIcs, setDownloadedIcs] = useState(false)
 
-  // The exact start time is not announced yet, so calendar entries are all-day.
-  const details = 'Walima reception of Omar S/o Afzal Yousaf & Sabika D/o Shezad Ahmed. Evening, Sofitel (1st Floor).'
+  // 1:00 – 4:00 PM Pakistan time (UTC+5); the hall is booked until 4 PM.
+  const details = 'Walima reception of Omar S/o Afzal Yousaf & Sabika D/o Shezad Ahmed. 1:00 – 4:00 PM, Sofitel (1st Floor).'
 
   const createGoogleCalendarUrl = () => {
     const url = new URL('https://calendar.google.com/calendar/render')
     url.searchParams.set('action', 'TEMPLATE')
     url.searchParams.set('text', 'Omar & Sabika — Walima Reception')
-    url.searchParams.set('dates', '20261228/20261229')
+    url.searchParams.set('dates', '20261228T080000Z/20261228T110000Z')
     url.searchParams.set('details', details)
     url.searchParams.set('location', 'Sofitel, 1st Floor')
     return url.toString()
@@ -29,8 +29,8 @@ export const EventCard: React.FC = () => {
       'BEGIN:VEVENT',
       'UID:omar-sabika-walima-20261228@invitation',
       'DTSTAMP:20261026T000000Z',
-      'DTSTART;VALUE=DATE:20261228',
-      'DTEND;VALUE=DATE:20261229',
+      'DTSTART:20261228T080000Z',
+      'DTEND:20261228T110000Z',
       'SUMMARY:' + esc('Omar & Sabika Walima Reception'),
       'DESCRIPTION:' + esc(details),
       'LOCATION:' + esc('Sofitel, 1st Floor'),
@@ -106,7 +106,7 @@ export const EventCard: React.FC = () => {
                 Time
               </span>
               <p className="font-serif text-lg sm:text-xl font-bold text-[#142A24] mt-0.5">
-                Evening
+                1 – 4 PM
               </p>
               <span className="text-xs text-[#6B655B] font-sans block mt-0.5">
                 Walima Feast
@@ -127,7 +127,7 @@ export const EventCard: React.FC = () => {
                 Sofitel
               </p>
               <span className="text-xs text-[#B08841] font-sans font-semibold block mt-0.5">
-                1st Floor Ballroom
+                1st Floor
               </span>
             </div>
           </div>
@@ -143,7 +143,7 @@ export const EventCard: React.FC = () => {
               </h4>
             </div>
             <p className="text-xs text-[#E5C378]/80 font-sans">
-              Evening Reception &amp; Walima Feast
+              1:00 – 4:00 PM · Walima Feast
             </p>
           </div>
 

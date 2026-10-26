@@ -5,11 +5,11 @@ import { Reveal } from './Reveal'
 import { CornerFlourish } from './DecorativeOrnaments'
 
 interface CountdownTimerProps {
-  targetDate?: string // Start of the Walima day, Pakistan time
+  targetDate?: string // Walima start, Pakistan time
 }
 
 export const CountdownTimer: React.FC<CountdownTimerProps> = ({ 
-  targetDate = '2026-12-28T00:00:00+05:00'
+  targetDate = '2026-12-28T13:00:00+05:00'
 }) => {
   const calculateTimeLeft = (): TimeLeft => {
     const target = new Date(targetDate).getTime()
@@ -79,7 +79,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
       </div>
       
       <p className="text-[11px] sm:text-xs font-serif italic text-[#6B655B] mt-2.5 sm:mt-3">
-        Monday, 28th December 2026 • Sofitel
+        Monday, 28th December 2026 • 1 PM • Sofitel
       </p>
       </div>
     </Reveal>
