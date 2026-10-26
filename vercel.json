@@ -1,10 +1,3 @@
 {
-  "framework": null,
-  "buildCommand": null,
-  "installCommand": null,
-  "outputDirectory": ".",
-  "cleanUrls": true,
-  "headers": [
-    { "source": "/(.*\.(jpg|png|svg))", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
-  ]
+  "framework": null
 }
