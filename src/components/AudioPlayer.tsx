@@ -7,11 +7,17 @@ interface AudioPlayerProps {
 
 // Background nasheed: Maher Zain · Barak Allah Lakuma (vocals only), streamed from YouTube
 const VIDEO_ID = '61C6FxprHuY'
+const START_AT = 37 // seconds
 
-type YTPlayer = { playVideo?: () => void; pauseVideo?: () => void; setVolume?: (v: number) => void }
+type YTPlayer = {
+  playVideo?: () => void
+  pauseVideo?: () => void
+  setVolume?: (v: number) => void
+  seekTo?: (s: number, allowSeekAhead: boolean) => void
+}
 type YTApi = {
   Player: new (el: HTMLElement, opts: object) => YTPlayer
-  PlayerState: { PLAYING: number; PAUSED: number }
+  PlayerState: { PLAYING: number; PAUSED: number; ENDED: number }
 }
 declare global {
   interface Window {
@@ -52,7 +58,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ autoPlayTrigger }) => 
           videoId: VIDEO_ID,
           width: 200,
           height: 200,
-          playerVars: { autoplay: 0, controls: 0, loop: 1, playlist: VIDEO_ID, playsinline: 1, rel: 0 },
+          playerVars: { autoplay: 0, controls: 0, start: START_AT, playsinline: 1, rel: 0 },
           events: {
             onReady: () => {
               player.setVolume?.(70)
@@ -62,6 +68,10 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ autoPlayTrigger }) => 
             onStateChange: (e: { data: number }) => {
               if (e.data === YT.PlayerState.PLAYING) setStatus('playing')
               else if (e.data === YT.PlayerState.PAUSED) setStatus('paused')
+              else if (e.data === YT.PlayerState.ENDED) {
+                player.seekTo?.(START_AT, true)
+                player.playVideo?.()
+              }
             },
             onError: () => setStatus('error'),
           },
