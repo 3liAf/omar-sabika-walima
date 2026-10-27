@@ -15,7 +15,7 @@ export const GuestWishes: React.FC = () => {
     {
       id: '2',
       name: 'Dr. Kamran & Huma',
-      message: 'Heartiest congratulations to Afzal Yousaf sahib & Shezad Ahmed sahib on this blessed occasion! May Allah bless the couple with immense happiness.',
+      message: 'Heartiest congratulations to Afzal Yousaf sahib & Shahzad Ahmed sahib on this blessed occasion! May Allah bless the couple with immense happiness.',
       timestamp: 'Yesterday',
     },
     {

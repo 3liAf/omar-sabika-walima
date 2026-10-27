@@ -7,7 +7,7 @@ export const EventCard: React.FC = () => {
   const [downloadedIcs, setDownloadedIcs] = useState(false)
 
   // 1:00 – 4:00 PM Pakistan time (UTC+5); the hall is booked until 4 PM.
-  const details = 'Walima reception of Omar S/o Afzal Yousaf & Sabika D/o Shezad Ahmed. 1:00 – 4:00 PM, Sofitel (1st Floor).'
+  const details = 'Walima reception of Omar S/o Afzal Yousaf & Sabika D/o Shahzad Ahmed. 1:00 – 4:00 PM, Sofitel (1st Floor).'
 
   const createGoogleCalendarUrl = () => {
     const url = new URL('https://calendar.google.com/calendar/render')

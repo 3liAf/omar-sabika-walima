@@ -5,7 +5,7 @@ export const ShareCard: React.FC = () => {
   const [copied, setCopied] = useState(false)
 
   const shareText = encodeURIComponent(
-    "💍 Walima Invitation\n\nYou are cordially invited to celebrate the Walima reception of Omar S/o Afzal Yousaf & Sabika D/o Shezad Ahmed.\n\n📅 Date: Monday, 28th December\n🕒 Time: 1:00 – 4:00 PM\n📍 Venue: Sofitel (1st Floor)\n\nView the interactive wedding invitation webpage here:"
+    "💍 Walima Invitation\n\nYou are cordially invited to celebrate the Walima reception of Omar S/o Afzal Yousaf & Sabika D/o Shahzad Ahmed.\n\n📅 Date: Monday, 28th December\n🕒 Time: 1:00 – 4:00 PM\n📍 Venue: Sofitel (1st Floor)\n\nView the interactive wedding invitation webpage here:"
   )
 
   const handleCopyLink = () => {

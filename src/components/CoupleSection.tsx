@@ -54,7 +54,7 @@ export const CoupleSection: React.FC = () => {
               <Letters text="Sabika" start={420} />
             </h2>
             <p className="font-sans text-xs sm:text-base text-[#8E6B2C] font-medium tracking-wide">
-              Daughter of <span className="font-semibold text-[#142A24]">Shezad Ahmed</span>
+              Daughter of <span className="font-semibold text-[#142A24]">Shahzad Ahmed</span>
             </p>
           </div>
         </div>
